@@ -41,6 +41,7 @@ style_duo_accent(
   secondary_color = "#FF961C",
   inverse_header_color = "#FFFFFF"
 )
+# style_mono_accent()
 ```
 
 ```{css, echo = FALSE}
@@ -77,6 +78,7 @@ tabela_1 <- data.frame(Produto = c("Alface", "Batata", "Tomate", "Feijão"),
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 knitr::kable(head(tabela_1), format = 'html', caption = "Tabela - Preços de mercadorias", align = "l")
 ```
+
 ---
 ### Dicionários
 A tabela anterior pode ser vista como um dicionário: as chaves seriam os nomes dos produtos e os valores, seus preços. Pra criar um dicionário, faríamos assim:
@@ -194,7 +196,7 @@ print(tabela.keys())
 Não precisamos passar, no caso das chaves, pra uma variável pra usar o operador `in`, como já foi dito [anteriormente](#operadores).
 ---
 ### Usando os métodos `items()`, `keys()` e `values()`
-Outro método útil é o `items()`. Ele é um _gerador_ (assim como `keys` e `values`), que nesse caso, retorna uma lista com _tuplas_ contendo a chave e o valor de cada item do dicionário. Usando apenas um `for` com duas variáveis (por exemplo: chave e valor) podemos fazer o _desempacotamento_ desses valores em uma "andada" só do _loop_.
+Outro método útil é o `items()`. Ele é um _gerador_ (assim como `keys` e `values`), que nesse caso, retorna uma lista com _tuplas_ contendo a chave e o valor de cada item do dicionário. Usando apenas um `for` com duas variáveis (por exemplo: chave e valor) podemos receber esses valores em uma "andada" só.
 
 Exemplo do uso do `items()`:
 ```{python, out.width="60%", collapse = TRUE}
@@ -309,7 +311,7 @@ a, b = b, a # trocando
 print(a, b)
 ```
 --
-Que seria uma opção, sem o uso de variáveis auxiliares, pra salvar os valores durante a troca.
+Que seria uma opção sem a necessidade do uso de variáveis auxiliares pra salvar os valores durante a troca.
 
 ---
 ### Dicionários de Listas, Tuplas e Dicionários (e listas de dicionários)
