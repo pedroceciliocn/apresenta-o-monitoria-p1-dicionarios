@@ -1,16 +1,17 @@
 ---
-title: "Dicionários e Tuplas"
-subtitle: "Monitoria P1 SI 2021.1"  
+title: "Monitoria IF968 - P1 - SI 2021.1"
+subtitle: "Dicionários e Tuplas"  
 author: 
-  - "pccn @ cin.ufpe.br"
-  - "(87)99995-2777"
+  - "pccn @ cin.ufpe.br  |  (87)99995-2777"
 # date: '`r Sys.Date()`' #atualizar isso
 date: "08/11/2021"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
+    seal: false ####
     css: xaringan-themer.css
     nature:
+      titleSlideClass: ["right", "top", "my-title"]
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
@@ -18,7 +19,19 @@ output:
       countIncrementalSlides: 
     includes:
       after_body: insert-logo.html
-  
+
+---
+
+class: inverse, center, middle
+background-image: url(figs/p_and_p_cover.png)
+background-size: cover
+.hide-logo[
+# Monitoria IF968 - P1 - SI 2021.1
+<img src="Horizontal Monocromático Preto - Logotipo CIn-UFPE.png" width="500px"/>
+## Dicionários e Tuplas
+### pccn@cin.ufpe.br  |  (87)9 9995-2777  
+## 08 de nov de 2021
+]
 ---
 
 ```{r setup, include=FALSE}
@@ -39,7 +52,9 @@ library(xaringanthemer)
 style_duo_accent(
   primary_color = "#1381B0",
   secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF"
+  inverse_header_color = "#FFFFFF",
+  title_slide_background_color = "#FF961C",
+  background_image = "Horizontal Monocromático Preto - Logotipo CIn-UFPE.png"
 )
 # style_mono_accent()
 ```
