@@ -373,16 +373,18 @@ print(tupla)
 
 ---
 ### Tuplas
-Também podemos usar tuplas para trocar valores de variáveis de maneira simultânea:
+Também podemos usar tuplas para atribuir e trocar valores de variáveis de maneira simultânea:
 
 ```python
-a, b = 10, 20 #isso seria uma operação de desempacotamento, já a criação de uma tupla seria um empacotamento
+a, b = 10, 20 # atribuindo
 print(a, b)
 ## 10 20
-a, b = b, a
+a, b = b, a # trocando
 print(a, b)
 ## 20 10
 ```
+--
+Que seria uma opção, sem o uso de variáveis auxiliares, pra salvar os valores durante a troca.
 
 ---
 ### Dicionários de Listas, Tuplas e Dicionários (e listas de dicionários)
