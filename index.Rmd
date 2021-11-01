@@ -2,8 +2,8 @@
 title: "Dicionários e Tuplas"
 subtitle: "Monitoria P1 SI 2021.1"  
 author: 
-  - "Pedro Neto @pccn"
-  - "Tel: (87)99995-2777"
+  - "pccn @ cin.ufpe.br"
+  - "(87)99995-2777"
 # date: '`r Sys.Date()`' #atualizar isso
 date: "08/11/2021"
 encoding: "UTF-8"
