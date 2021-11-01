@@ -191,42 +191,6 @@ for chave in tabela:
 
 ```
 ---
-
-### Usando os métodos `items()`, `keys()` e `values()`
-Com o método `values` é possível receber uma lista dos valores do dicionário:
-```{python, collapse = TRUE}
-print(tabela.values())
-```
-Com isso, podemos verificar se um valor está no dicionário. Basta passar pra uma variável essa coleção de valores e depois usar o operador `in`:
-```{python, collapse = TRUE}
-valores = tabela.values()
-print(1.20 in valores)
-```
----
-### Usando os métodos `items()`, `keys()` e `values()`
-Agora usando o método `keys`, recebemos uma lista com as chaves do dicionário:
-```{python, collapse = TRUE}
-print(tabela.keys())
-```
-Não precisamos passar, no caso das chaves, pra uma variável pra usar o operador `in`, como já foi dito [anteriormente](#operadores).
----
-### Usando os métodos `items()`, `keys()` e `values()`
-Outro método útil é o `items()`. Ele é um _gerador_ (assim como `keys` e `values`), que nesse caso, retorna uma lista com _tuplas_ contendo a chave e o valor de cada item do dicionário. Usando apenas um `for` com duas variáveis (por exemplo: chave e valor) podemos receber esses valores em uma "andada" só.
-
-Exemplo do uso do `items()`:
-```{python, out.width="60%", collapse = TRUE}
-print(tabela.items())
-
-```
-Percorrendo com o for:
-```{python, collapse = TRUE}
-for chave, valor in tabela.items():
-    print(chave, valor)
-```
----
-### Usando os métodos `items()`, `keys()` e `values()`
-> Cuidado ao usar esses métodos "prontos". É aconselhável que se use o `for` da forma como foi vista [aqui](#iterando).
----
 ## Tuplas
 Tuplas são parecidas com listas mas são imutáveis. São ideais para representar listas de valores constantes.
 
