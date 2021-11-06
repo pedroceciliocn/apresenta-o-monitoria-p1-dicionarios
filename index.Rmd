@@ -281,18 +281,6 @@ print(tupla)
 ```
 
 ---
-### Tuplas
-Também podemos usar tuplas para atribuir e trocar valores de variáveis de maneira simultânea:
-```{python, collapse = TRUE}
-a, b = 10, 20 # atribuindo
-print(a, b)
-a, b = b, a # trocando
-print(a, b)
-```
---
-Que seria uma opção sem a necessidade do uso de variáveis auxiliares pra salvar os valores durante a troca.
-
----
 ### Dicionários de Listas, Tuplas e Dicionários (e listas de dicionários)
 No Python há a possibilidade de se criar dicionários em que as chaves estão associadas a listas, tuplas ou até mesmo outros dicionários. Um exemplo seria o caso abaixo, de mais uma vez, um estoque de frutas, mas agora com mais uma informação disponível para acesso - a quantidade - numa lista, junto do preço:
 ```{r message=FALSE, warning=FALSE, include=FALSE}
@@ -347,7 +335,7 @@ total = 0
 print("Vendas:")
 for operacao in venda:
     produto = operacao[0]       # aqui usamos variáveis para atribuir as chaves e os dados dos produtos
-    qtd = operacao[1]           # produto, qtd = operacao outra opção, usando _desempacotamento_
+    qtd = operacao[1]           # produto, qtd = operacao outra opção
     preco = estoque[produto][1] # como os dados são uma lista, usamos o segundo elemento dela
     custo = preco * qtd
     print(f"{produto:12s}: {qtd:3d} x {preco:6.2f} = {custo:6.2f}")
