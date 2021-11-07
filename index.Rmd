@@ -49,6 +49,7 @@ knitr::opts_chunk$set(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
+library(xaringanExtra)
 style_duo_accent(
   primary_color = "#1381B0",
   secondary_color = "#FF961C",
@@ -57,6 +58,10 @@ style_duo_accent(
   background_image = "Horizontal Monocromático Preto - Logotipo CIn-UFPE.png"
 )
 # style_mono_accent()
+```
+
+```{r xaringanExtra-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
 ```
 
 ```{css, echo = FALSE}
@@ -76,6 +81,7 @@ style_duo_accent(
 .tiny .remark-code { /*Change made here*/
   font-size: 60% !important;
 }
+
 ```
 
 ## Dicionários
@@ -349,6 +355,9 @@ for chave in estoque:
     print(f"Preço: {estoque[chave][1]:6.2f}\n")
 ```
 ]
+
+---
+
 
 ---
 ### Exercícios
