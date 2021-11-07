@@ -62,6 +62,18 @@ style_duo_accent(
 
 ```{r xaringanExtra-scribble, echo=FALSE}
 xaringanExtra::use_scribble()
+xaringanExtra::use_panelset()
+```
+
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
 ```
 
 ```{css, echo = FALSE}
@@ -79,7 +91,7 @@ xaringanExtra::use_scribble()
   font-size: 200% !important;
 }
 .tiny .remark-code { /*Change made here*/
-  font-size: 60% !important;
+  font-size: 80% !important;
 }
 
 ```
@@ -336,8 +348,10 @@ total = 0
 > Continua...
 
 ---
-.tiny[
-``` {python, collapse = TRUE, results = "hold"}
+.panelset[
+.panel[.panel-name[Continuação]
+
+```{python panel-chunkb, fig.show='hide', eval=FALSE}
 print("Vendas:")
 for operacao in venda:
     produto = operacao[0]       # aqui usamos variáveis para atribuir as chaves e os dados dos produtos
@@ -356,7 +370,36 @@ for chave in estoque:
 ```
 ]
 
----
+.panel[.panel-name[Saída]
+.tiny[
+```{python panel-chunkc, fig.show='hide'}
+## Vendas:
+## tomate      :   8 x   2.30 =  18.40
+## batata      :  12 x   1.20 =  14.40
+## alface      :   8 x   0.45 =   3.60
+## Custo total :                 36.40
+## 
+## Estoque:
+## 
+## Descrição: tomate
+## Quantidade: 992
+## Preço:   2.30
+## 
+## Descrição: alface
+## Quantidade: 492
+## Preço:   0.45
+## 
+## Descrição: batata
+## Quantidade: 1989
+## Preço:   1.20
+## 
+## Descrição: feijão
+## Quantidade: 100
+## Preço:   1.50
+```
+]
+]
+]
 
 
 ---

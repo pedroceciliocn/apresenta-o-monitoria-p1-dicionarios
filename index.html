@@ -10,6 +10,14 @@
     <link href="index_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
     <script src="index_files/xaringanExtra-scribble/scribble.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <link href="index_files/panelset/panelset.css" rel="stylesheet" />
+    <script src="index_files/panelset/panelset.js"></script>
+    <script src="index_files/clipboard/clipboard.min.js"></script>
+    <link href="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+    <link href="index_files/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome/css/v4-shims.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -34,6 +42,9 @@ background-size: cover
 
 
 
+
+
+
 &lt;style type="text/css"&gt;
 # .remark-slide-content {
 #   font-size: 28px;
@@ -49,7 +60,7 @@ background-size: cover
   font-size: 200% !important;
 }
 .tiny .remark-code { /*Change made here*/
-  font-size: 60% !important;
+  font-size: 80% !important;
 }
 
 &lt;/style&gt;
@@ -434,7 +445,9 @@ total = 0
 &gt; Continua...
 
 ---
-.tiny[
+.panelset[
+.panel[.panel-name[Continuação]
+
 
 ```python
 print("Vendas:")
@@ -452,6 +465,13 @@ for chave in estoque:
     print(f"Descrição: {chave}")
     print(f"Quantidade: {estoque[chave][0]}")
     print(f"Preço: {estoque[chave][1]:6.2f}\n")
+```
+]
+
+.panel[.panel-name[Saída]
+.tiny[
+
+```python
 ## Vendas:
 ## tomate      :   8 x   2.30 =  18.40
 ## batata      :  12 x   1.20 =  14.40
@@ -477,8 +497,8 @@ for chave in estoque:
 ## Preço:   1.50
 ```
 ]
-
----
+]
+]
 
 
 ---
