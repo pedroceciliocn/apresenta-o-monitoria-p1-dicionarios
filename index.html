@@ -430,7 +430,8 @@ Os nomes dos produtos continuam sendo as chaves, mas agora os valores associados
 
 ---
 ### Dicionários de Listas, Tuplas e Dicionários (e listas de dicionários)
-Agora um exemplo de dicionário, usando a tabela de estoque anterior, em que processamos uma lista de operações de venda, calculando o valor total vendido e atualizando a quantidade em estoque:
+Agora um exemplo de dicionário, usando a tabela de estoque anterior, em que processamos uma lista de operações de venda, calculando o valor total vendido e atualizando a quantidade em estoque.
+#### Criando a tabela e a lista de listas com as vendas:
 
 ```python
 estoque = {"tomate": [1000, 2.30],
@@ -439,7 +440,6 @@ estoque = {"tomate": [1000, 2.30],
            "feijão": [100, 1.50]}
            
 venda = [["tomate", 8], ["batata", 12], ["alface", 8]]
-total = 0
 ```
 
 &gt; Continua...
@@ -450,18 +450,19 @@ total = 0
 
 
 ```python
+total = 0
 print("Vendas:")
 for operacao in venda:
     produto = operacao[0]       # aqui usamos variáveis para atribuir as chaves e os dados dos produtos
-    qtd = operacao[1]           # produto, qtd = operacao outra opção
-    preco = estoque[produto][1] # como os dados são uma lista, usamos o segundo elemento dela
-    custo = preco * qtd
+    qtd = operacao[1]           # produto, qtd = operacao -&gt; outra opção
+    preco = estoque[produto][1] # como os valores estão numa lista, usamos o segundo elemento dela
+    custo = preco * qtd 
     print(f"{produto:12s}: {qtd:3d} x {preco:6.2f} = {custo:6.2f}")
-    estoque[produto][0] -= qtd
+    estoque[produto][0] -= qtd # atualizamos a quantidade em estoque
     total += custo
 print(f"Custo total : {total:21.2f}\n")
 print("Estoque:\n")
-for chave in estoque:
+for chave in estoque: # conferindo o estoque após as vendas
     print(f"Descrição: {chave}")
     print(f"Quantidade: {estoque[chave][0]}")
     print(f"Preço: {estoque[chave][1]:6.2f}\n")
